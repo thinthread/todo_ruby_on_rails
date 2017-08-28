@@ -2,9 +2,17 @@
 %html
   %head
     %title Todo
+    = stylesheet_link_tag "application", media: "all"
+    = javascript_include_tag "application"
+    / = javascript_include_tag "default"
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
-
   %body
+    / .row-fluid
+    /   .span10.offset1
+    /     .hero-unit.text-counter
+    /       %h1
+    /         ToDo
+    /       %p
+    /         welcome to the tutorial's Todo Application
     = yield
+
